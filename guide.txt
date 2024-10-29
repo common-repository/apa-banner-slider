@@ -1,0 +1,69 @@
+<?php 
+$result = $wpdb->get_results("select * from ".$wpdb->prefix."banners WHERE list_status= '1' and bannerName='vision' "); 
+			
+	if( $result ) {
+
+           			foreach( $result as $entry_detail ) {
+            	  
+					
+					echo '<img src="'.$entry_detail->imgPath.'">';
+
+					echo $entry_detail->bannerName;
+					
+					echo $entry_detail->banner_heading;
+					echo $entry_detail->banner_subheading;
+					
+			 
+			   } 
+			 } 
+  ?> 
+  
+  
+ 
+  
+ <?php 
+ // example 2 for you custom div 
+$result = $wpdb->get_results("select * from ".$wpdb->prefix."banners WHERE list_status= '1' ");
+		if( $result )
+		 {
+		?>
+<div id ="banner-slider">
+
+                    
+           <?php
+					$count_detail = 0;
+					
+					foreach( $result as $entry_detail ) 
+							{
+           ?>
+            <div class="banner-image-block" <?php if($count_detail == 0) { echo ' active';}?>" style="background-image:url(<?php echo $entry_detail->imgPath;?>)" >
+                            
+                                       
+                                        
+                                      
+                                                 
+          <div class="banner-text-block">
+		  <?php 
+		  		 	echo $entry_detail->bannerName;
+				  	echo $entry_detail->banner_heading; 
+				  	echo $entry_detail->banner_heading;
+            ?>
+   
+                                       
+           </div>
+                              
+			<?php 
+             		 $count_detail++;
+          		}
+                        
+              ?>
+                 
+                    </div>
+                
+          </div>
+         
+
+		<?php
+       	 }
+ 
+        ?>

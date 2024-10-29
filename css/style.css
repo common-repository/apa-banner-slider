@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**pagination**/
+
+.pagination-holder {
+	/*width: 200px;
+	margin: 0 auto;*/
+	position: relative;
+top: 0;
+text-align: center;
+width: 100%;
+float: none;
+clear:both;
+
+}
+.pagination-holder ul {
+	margin: 0;
+	padding: 0;
+}
+.pagination-holder ul li {
+	display:inline-block;
+	width: 18px;
+	height: 19px;
+	margin-right: 5px;
+	list-style: none;
+	font-size: 16px;
+	text-align: center;
+	line-height: 19px;
+	color: #919395;
+	font-family: 'Museo-700';
+	font-weight: normal;
+	border: 1px solid #ccc;
+padding: 4px;
+}
+.pagination-holder span.active {
+color:#f00;
+
+}
+.pagination-holder ul li a{
+	color: #919395;
+	text-decoration:none;
+	font-family: 'Museo-300'; font-weight:normal;
+}
+
+.pagination-holder ul li:hover{ background-color:#f5f5f5;
+}
+
+#wp_paginate{ float:right;
+
+	}
+	
+	
+#wp_paginate .paginate {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+}
+
+#wp_paginate a.paginate {
+	border: 1px solid #94b9dc;
+	padding: 2px 6px 2px 6px;
+	text-decoration: none;
+	color: #555;
+	font-size:12px;
+	background:#EEE url('../images/menu-bits.gif?ver=20100610') repeat-x scroll left -379px;
+}
+
+
+#wp_paginate a.paginate:hover {
+	background-color: #FFFBCC;
+	color: #555;
+	text-decoration: none;
+	border: 1px solid #e6db55;
+}
+
+#wp_paginate a.current {
+	border: 1px solid #e6db55;
+	padding: 2px 6px 2px 6px;
+	cursor: default;
+	background:#FFFBCC;
+	color: #555;
+	text-decoration: none;
+	font-size:12px;
+}
+
+#wp_paginate span.inactive {
+	border: 1px solid #999;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	padding: 2px 6px 2px 6px;
+	color: #999;
+	cursor: default;
+}
+
+label{
+	width:200px;
+	display:block;
+	float:left;
+	font-weight:bold;
+}
